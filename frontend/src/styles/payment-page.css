@@ -1,0 +1,158 @@
+/* Animations */
+@keyframes slideInUp {
+  0% { opacity: 0; transform: translateY(50px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+@keyframes progressAnimation {
+  0% { width: 65%; }
+  50% { width: 75%; }
+  100% { width: 65%; }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Page */
+.payment-page {
+  min-height: 100vh;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 20px;
+}
+
+/* Card */
+.payment-box {
+  background: #fff;
+  padding: 64px 48px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e9ecef;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* Title */
+.payment-icon {
+  font-size: 80px;
+  margin-bottom: 24px;
+  animation: bounce 2s infinite;
+}
+.payment-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 16px;
+}
+.payment-subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #e67e22;
+  margin-bottom: 24px;
+}
+.payment-description {
+  font-size: 18px;
+  color: #6c757d;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+/* Progress */
+.progress-bar {
+  background: #e9ecef;
+  border-radius: 10px;
+  height: 8px;
+  width: 100%;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.progress {
+  background: #3498db;
+  height: 100%;
+  width: 65%;
+  border-radius: 10px;
+  animation: progressAnimation 3s ease-in-out infinite;
+}
+.progress-text {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 32px;
+}
+
+/* Features */
+.payment-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+.feature {
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #3498db;
+}
+.feature-icon { font-size: 32px; margin-bottom: 12px; }
+.feature-text { font-size: 14px; font-weight: 600; color: #2c3e50; }
+
+/* Coming soon */
+.coming-soon {
+  margin-top: 40px;
+  padding: 24px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+}
+.coming-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #2c3e50;
+}
+.coming-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+.tag {
+  background: #3498db;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  animation: pulse 2s infinite;
+}
+
+/* Footer */
+.payment-footer {
+  font-size: 14px;
+  color: #6c757d;
+  margin-top: 32px;
+  font-style: italic;
+}
